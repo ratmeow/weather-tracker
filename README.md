@@ -23,9 +23,7 @@
 1. Склонировать репозиторий `git clone https://github.com/ratmeow/weather-tracker.git`
 2. Cоздать файл окружения .env по примеру файла tests.env. Обязательно нужен действительный ключ OPENWEATHER_API_KEY, который можно получить на https://openweathermap.org/
 3. Убедитесь, что у вас установлен docker
-4. Если у вас linux, то чтобы фронтенд правильно проксировал запросы на бекенд необходимо сначала добавить `extra_hosts` в сервис `nginx` в `docker-compose.yml`:
-           `extra_hosts:
-             - "host.docker.internal:host-gateway"`
+4. Если у вас **linux**, то чтобы frontend правильно проксировал запросы на backend необходимо в `nginx.conf` поменять значение переменной **proxy_pass** на `http://backend:8080/;`
 5. Запустить сервисы `docker compose -f compose.dev.yaml up -d`
 6. Установить зависимости `poetry install --only main`
 7. Выполнить начальную миграцию `alembic upgrade head`
