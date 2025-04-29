@@ -20,8 +20,6 @@ services:
       - REDIS_SESSION_LIFETIME_SEC=${REDIS_SESSION_LIFETIME_SEC}
     ports:
       - "8080:8080"
-    volumes:
-      - ./weather_tracker:/weather_tracker:z
     depends_on:
       - database
       - cache
@@ -57,9 +55,6 @@ services:
     container_name: weather-frontend
     ports:
       - "3000:80"
-    volumes:
-      - ./frontend:/usr/share/nginx/html:z
-      - ./nginx.conf:/etc/nginx/conf.d/default.conf:z
     depends_on:
       - backend
 
