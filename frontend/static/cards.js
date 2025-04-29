@@ -22,9 +22,13 @@ function createWeatherCard(location) {
             </div>
             <div class="card-body">
                 <h2 class="weather-temp">${location.temperature}°</h2>
-                <h3 class="location-name">${location.name} <span class="flag-emoji">${flagEmoji}</span></h3>
-                <p class="weather-state text-capitalize">${location.mainState}</p>
 
+<div class="d-flex justify-content-between align-items-center mb-1">
+  <h3 class="location-name mb-0">${location.name} <span class="flag-emoji">${flagEmoji}</span></h3>
+  <div class="weather-icon ms-2">
+    <i class="${weatherIconClass}"></i>
+  </div>
+</div>
                 <div class="info-section">
                     <div class="info-row">
                         <span class="info-label">Feels like</span>

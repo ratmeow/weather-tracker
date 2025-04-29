@@ -31,7 +31,7 @@ class WeatherResponse(LocationResponse):
     temperature_feels: Optional[int] = Field(default=None, alias="temperatureFeels")
     humidity: Optional[int] = Field(default=None)
 
-    @field_validator("temperature", "main_state", "wind_speed", "temperature_feels", "humidity", mode="before")
+    @field_validator("temperature", "wind_speed", "temperature_feels", "humidity", mode="before")
     def validate_temp(cls, v):
         try:
             return int(float(v)) if v is not None else None
