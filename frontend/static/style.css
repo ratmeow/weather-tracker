@@ -1,0 +1,126 @@
+/* Основной стиль */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-color: #f5f5f7;
+    color: #1d1d1f;
+    line-height: 1.47059;
+    font-weight: 400;
+}
+
+/* Карточки */
+.card {
+    border: 1px solid #e5e5e7;
+    border-radius: 12px;
+    background-color: #ffffff;
+    box-shadow: none;
+    transition: transform 0.2s ease;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+}
+
+.card-body {
+    padding: 20px;
+}
+
+/* Температура - УВЕЛИЧЕНА */
+.weather-temp {
+    font-size: 58px;
+    font-weight: 300;
+    line-height: 1;
+    margin: 0 0 16px 0;
+    letter-spacing: -0.025em;
+    color: #1d1d1f;
+}
+
+/* Название места - УВЕЛИЧЕНО */
+.location-name {
+    font-size: 22px;
+    font-weight: 600;
+    margin: 0 0 2px 0;
+    color: #1d1d1f;
+}
+
+/* Состояние погоды - маленький серый текст */
+.weather-state {
+    font-size: 14px;
+    color: #86868b;
+    margin: 0 0 16px 0;
+    font-weight: 400;
+}
+
+/* Блок информации */
+.info-section {
+    border-top: 1px solid #e5e5e7;
+    padding-top: 14px;
+    margin-top: 10px;
+}
+
+.info-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    line-height: 1.42859;
+    margin-bottom: 6px;
+    color: #1d1d1f;
+}
+
+.info-label {
+    color: #86868b;
+}
+
+/* Флаги */
+.flag-emoji {
+    font-family: "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 20px; /* УВЕЛИЧЕН размер флага */
+    vertical-align: middle;
+    margin-left: 4px;
+}
+
+/* Погодные иконки */
+.weather-icon {
+    color: #0071e3;
+    font-size: 16px;
+    margin-right: 4px;
+    vertical-align: -1px;
+}
+
+/* Кнопки */
+.btn {
+    background-color: #0071e3;
+    color: white;
+    font-size: 14px;
+    font-weight: 400;
+    border-radius: 980px; /* округлые кнопки как у Apple */
+    padding: 8px 16px;
+    border: none;
+    transition: all 0.2s ease;
+}
+
+.btn:hover {
+    background-color: #0077ed;
+}
+
+.btn-close {
+    opacity: 0.5;
+    padding: 8px;
+    background: none;
+    border: none;
+}
+
+.btn-close:hover {
+    opacity: 0.8;
+}
+
+/* Карточки локаций */
+.location-card .info-row {
+    margin-bottom: 8px;
+}
+
+/* Для карточек локаций */
+.location-card .location-name {
+    font-size: 22px; /* УВЕЛИЧЕН размер названия для локаций */
+    margin-bottom: 10px;
+}

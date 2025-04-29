@@ -1,0 +1,2 @@
+class OpenWeatherClientError(Exception):
+    pass

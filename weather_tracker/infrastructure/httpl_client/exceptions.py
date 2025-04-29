@@ -1,0 +1,2 @@
+class AsyncClientInternalError(Exception):
+    pass
